@@ -1,0 +1,128 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.pagina {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* Encabezado azul */
+.encabezado {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 15px 20px 20px;
+  border-bottom: 2px solid #d6d6d6;
+}
+
+.encabezado h1 {
+  font-size: 30px;
+  margin: 0 0 12px;
+}
+
+.encabezado p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Contenido principal */
+.contenido {
+  padding: 20px;
+}
+
+.titulo-productos {
+  text-align: center;
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+/* Tarjetas de productos */
+.lista-productos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.producto {
+  width: 212px;
+  padding: 20px 15px 16px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.producto p {
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.producto .categoria {
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.producto .precio {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.producto .total {
+  font-weight: bold;
+}
+
+.disponible {
+  color: #167443;
+  font-weight: bold;
+}
+
+.agotado {
+  color: #b83226;
+  font-weight: bold;
+}
+
+/* Botón de compra */
+.producto button {
+  width: 80px;
+  padding: 7px 10px;
+  margin-top: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e3a5f;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.producto button:disabled {
+  background-color: #999;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+  .lista-productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 300px;
+  }
+}
